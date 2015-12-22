@@ -45,4 +45,5 @@ a:hover{color: #f60;}
 
 .list{}
 .tags{}
+.tags-li{float: left;margin-right: 20px;}
 .search{}

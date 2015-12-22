@@ -10,7 +10,7 @@ var Tag = Backbone.View.extend({
   template:_.template($('#J_tag').html()),
   el:$('.tags-ul'),
   events:{
-    'click .tag-a':'showArticles'
+    'click .tags-a':'showArticles'
   },
   showArticles:function(e){
     var target = e.target || e.srcElement;
