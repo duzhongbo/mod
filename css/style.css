@@ -1,7 +1,13 @@
 html,body,.wrap,.index,.list,.tags,.search{height: 100%;}
 body,ul,h1{margin: 0;padding: 0;}
+
+
 .wrap{}
 .index{background-color: #000;}
+.index-bg{background: fixed no-repeat 50% 50%;background-size: cover;}
+.index-bg0{background-image: url(../img/bg0.jpg);}
+.index-bg1{background-image: url(../img/bg1.jpg);}
+.index-bg2{background-image: url(../img/bg2.jpg);}
 .list{}
 .tags{}
 .search{}
