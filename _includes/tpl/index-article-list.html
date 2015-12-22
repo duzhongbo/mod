@@ -1,0 +1,10 @@
+<script type="text/template" id="J_index_article_list">
+
+<% for(var i=0,len=aArticle.length;i<len;i++) { %>
+	<li class="article-list-li">
+		<div class="article-list-date fr"><%= aArticle[i].date %></div>
+		<a href="<%= aArticle[i].url %>" class="index-a article-list-a"><%= aArticle[i].title %></a>
+	</li>
+<% } %>
+
+</script>
