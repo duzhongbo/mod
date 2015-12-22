@@ -10,7 +10,7 @@ define(function(require, exports) {
 		nav2:function(e){
 			var target = e.target || e.srcElement;
 			var url = $(target).attr('href');
-			location.hash=url;
+			location.hash=url.split('/')[1];
 			return false;
 		}
 	});

@@ -24,6 +24,18 @@ var Router = Backbone.Router.extend({
 				console.log(aArticle[i]);
 			}
 		}
+	},
+	index:function(){
+		$('.page').hide();
+		$('.index').show();
+	},
+	list:function(){
+		$('.page').hide();
+		$('.list').show();
+	},
+	tags:function(){
+		$('.page').hide();
+		$('.tags').show();
 	}
 
 });
