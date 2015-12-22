@@ -5,7 +5,7 @@ define(function(require, exports) {
 	var r = new Router;
 	Backbone.history.start();
 	// 首页文章列表渲染
-	var temp = require("./view/ArticleList");
+	var temp = require("./view/article_list");
 	ArticleList = temp.ArticleList;
 	var a = new ArticleList;
 
