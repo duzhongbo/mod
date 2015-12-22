@@ -1,5 +1,6 @@
 html,body,.wrap,.index,.list,.tags,.search{height: 100%;}
 body,ul,h1{margin: 0;padding: 0;}
+a:hover{color: #f60;}
 
 .oh{overflow: hidden;}
 .pof{position: fixed;}
@@ -18,13 +19,15 @@ body,ul,h1{margin: 0;padding: 0;}
 .border-b-1-s-fff{border-bottom: 1px #fff solid;}
 
 .wrap{font-size: 62.5%;}
-a:hover{color: #f60;}
 
 .nav{line-height: 25px;}
 .nav-a{float: left;color: #fff;padding: 0 5px;text-decoration: none;}
 .nav-a:hover{background-color: #000;}
 .nav-cur-a,.nav-cur-a:hover{background-color: #f00;color: #fff;}
 .nav-cur-a:hover{cursor: default;}
+
+.search-input{width: 120px;border-radius: 2px;border:none;margin-left: 5px;}
+.search-button{border:none;border-radius: 2px;cursor: pointer;}
 
 .index{background-color: #000;color:#fff;}
 .index-a{color: #fff;}
