@@ -28,14 +28,23 @@ var Router = Backbone.Router.extend({
 	index:function(){
 		$('.page').hide();
 		$('.index').show();
+		$('.nav-a').removeClass('nav-cur-a');
+		var obj = $('.nav-a')[0];
+		$(obj).addClass('nav-cur-a');
 	},
 	list:function(){
 		$('.page').hide();
 		$('.list').show();
+		$('.nav-a').removeClass('nav-cur-a');
+		var obj = $('.nav-a')[1];
+		$(obj).addClass('nav-cur-a');
 	},
 	tags:function(){
 		$('.page').hide();
 		$('.tags').show();
+		$('.nav-a').removeClass('nav-cur-a');
+		var obj = $('.nav-a')[2];
+		$(obj).addClass('nav-cur-a');
 	}
 
 });
