@@ -1,5 +1,5 @@
 html,body,.wrap,.index,.list,.tags,.search{height: 100%;}
-body,ul,h1{margin: 0;padding: 0;}
+body,ul,h1,h3{margin: 0;padding: 0;}
 a:hover{color: #f60;}
 
 .oh{overflow: hidden;}
@@ -28,6 +28,9 @@ a:hover{color: #f60;}
 
 .search-input{width: 120px;border-radius: 2px;border:none;margin-left: 5px;}
 .search-button{border:none;border-radius: 2px;cursor: pointer;}
+
+.common-inner{margin-top: 35px;width: 80%;}
+.article{}
 
 .index{background-color: #000;color:#fff;}
 .index-a{color: #fff;}

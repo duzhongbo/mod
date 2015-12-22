@@ -17,6 +17,10 @@ var Router = Backbone.Router.extend({
 		for(var i=0,len=aArticle.length;i<len;i++){
 			var url = aArticle[i].url
 			if(sUrl==url){
+				$('.page').hide();
+				$('.article-title').html(aArticle[i].title);
+				$('.article-content').html(aArticle[i].content);
+				$('.article').show();
 				console.log(aArticle[i]);
 			}
 		}
