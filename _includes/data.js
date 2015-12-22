@@ -1,11 +1,11 @@
-// 文章数据
+// 文章数据,数组类型全量数据
 var aArticle = '['+
 	{% for post in site.posts] %}
 		{% if post != site.posts[0] %}','+{% endif %}
 		'{'+
 			'"url":"{{post.url}}",'+
 			'"title":"{{post.title}}",'+
-			'"content":"{{post.content | strip_newlines |escape}}",'+// 过滤换行符,将内容字符串化
+			'"content":"{{post.content | strip_newlines |escape}}",'+// 过滤换行符,内容字符串化
 			'"date":"{{post.date | date:"%Y/%m/%d"}}",'+
 			'"img":"{{post.customer.img}}",'+
 			'"tags":'+
@@ -22,17 +22,8 @@ var aArticle = '['+
 aArticle=aArticle.replace(/\s*/g,'');// 过滤空白字符
 aArticle = JSON.parse(aArticle);// 字符串格式化
 
-// 标签数据
-var aTags = '['+
-	{% for tag in site.tags %}
-		{% if tag[0] != site.tags.first[0] %}','+{% endif %}
-		'"{{ tag[0] }}"'+
-	{% endfor %}
-']';
-var aTags = JSON.parse(aTags);
-
-// 以标签为键值组织的文章json
-var aData = '{'+
+// 文章数据,以标签为键值组织的文章json,文章只包含主要的信息，非全量
+var oArticle = '{'+
 	{% for tag in site.tags %}
 		{% if tag[0] != site.tags.first[0] %}','+{% endif %}
 		'"{{ tag[0] }}":'+
@@ -48,7 +39,17 @@ var aData = '{'+
 		']'+
 	{% endfor %}
 '}';
-var aData = JSON.parse(aData);
+var oArticle = JSON.parse(oArticle);
+
+// 标签数据
+var aTags = '['+
+	{% for tag in site.tags %}
+		{% if tag[0] != site.tags.first[0] %}','+{% endif %}
+		'"{{ tag[0] }}"'+
+	{% endfor %}
+']';
+var aTags = JSON.parse(aTags);
+
 // 导航数据
 var aNav = [
 {
@@ -65,4 +66,4 @@ var aNav = [
 },
 ];
 
-console.log(aArticle,aTags,aData,aNav);
+console.log(aArticle,aTags,oArticle,aNav);
