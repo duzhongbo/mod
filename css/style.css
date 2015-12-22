@@ -1,0 +1,7 @@
+html,body,.wrap,.index,.list,.tags,.search{height: 100%;}
+body,ul,h1{margin: 0;padding: 0;}
+.wrap{}
+.index{background-color: #000;}
+.list{}
+.tags{}
+.search{}
