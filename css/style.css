@@ -31,6 +31,8 @@ a:hover{color: #f60;}
 
 .common-inner{margin-top: 35px;width: 80%;}
 .article{}
+.article-title{margin-bottom: 20px;}
+.article-content{line-height: 22px;text-indent: 2em;}
 
 .index{background-color: #000;color:#fff;}
 .index-a{color: #fff;}
