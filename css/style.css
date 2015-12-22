@@ -2,6 +2,7 @@ html,body,.wrap,.index,.list,.tags,.search{height: 100%;}
 body,ul,h1{margin: 0;padding: 0;}
 
 .oh{overflow: hidden;}
+.pof{position: fixed;}
 .tac{text-align: center;}
 .tal{text-align: left;}
 .tar{text-align: right;}
@@ -10,13 +11,23 @@ body,ul,h1{margin: 0;padding: 0;}
 .p10{padding: 10px;}
 .fl{float: left;}
 .fr{float: right;}
+.w100p{width: 100%;}
 .alpha-000-5{background-color: rgba(0,0,0,.5);}
+.alpha-000-7{background-color: rgba(0,0,0,.7);}
+.alpha-000-9{background-color: rgba(0,0,0,.9);}
 .border-b-1-s-fff{border-bottom: 1px #fff solid;}
 
 .wrap{font-size: 62.5%;}
-.wrap a:hover{color: #f60;}
+a:hover{color: #f60;}
+
+.nav{line-height: 25px;}
+.nav-a{float: left;color: #fff;padding: 0 5px;text-decoration: none;}
+.nav-a:hover{background-color: #000;}
+.nav-cur-a,.nav-cur-a:hover{background-color: #f00;color: #fff;}
+.nav-cur-a:hover{cursor: default;}
+
 .index{background-color: #000;color:#fff;}
-.index a{color: #fff;}
+.index-a{color: #fff;}
 .index-bg-img{background: fixed no-repeat 50% 50%;background-size: cover;}
 .index-bg-img0{background-image: url(../img/bg0.jpg);}
 .index-bg-img1{background-image: url(../img/bg1.jpg);}
