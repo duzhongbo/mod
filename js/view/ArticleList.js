@@ -14,6 +14,10 @@ var ArticleList = Backbone.View.extend({
   },
   showArticles:function(e){
   	console.log("1212211221");
+    var target = e.target || e.srcElement;
+    var url = $(target).attr('href');
+    location.hash='article'+url;
+    return false;
   }
 });
 
