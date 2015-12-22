@@ -38,6 +38,10 @@ var Router = Backbone.Router.extend({
 		$('.nav-a').removeClass('nav-cur-a');
 		var obj = $('.nav-a')[1];
 		$(obj).addClass('nav-cur-a');
+		//
+		var temp = require('./view/list.js');
+		var List = temp.List;
+		var l = new List;
 	},
 	tags:function(){
 		$('.page').hide();

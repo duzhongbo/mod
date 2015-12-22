@@ -1,14 +1,14 @@
 define(function(require, exports) {
 
-var ArticleList = Backbone.View.extend({
+var List = Backbone.View.extend({
   initialize:function(){
     var oData = {
-      aArticle:aArticle.slice(0,3)
+      aArticle:aArticle
     }
-  	$('.index .article-list-ul').html(this.template(oData));
+  	$('.list .article-list-ul').html(this.template(oData));
   },
-  template:_.template($('#J_index_article_list').html()),
-  el:$('.index .article-list-ul'),
+  template:_.template($('#J_list_article_list').html()),
+  el:$('.list .article-list-ul'),
   events:{
     'click .article-list-a':'showArticles'
   },
@@ -20,6 +20,6 @@ var ArticleList = Backbone.View.extend({
   }
 });
 
-exports.ArticleList = ArticleList;
+exports.List = List;
 
 });
