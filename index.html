@@ -4,6 +4,7 @@ title: 杜忠波的个人网站
 ---
 
 <div class="wrap">
+	<!-- 导航 -->
 	<div class="nav pof w100p alpha-000-9">
 		<div class="search fl">
 			<input type="input" value="" class="search-input" />
@@ -51,14 +52,13 @@ title: 杜忠波的个人网站
 <script type="text/javascript">
 {% include data.js %}
 
-
-
 </script>
+<!-- 导航模板 -->
+{% include tpl/nav.html %}
 <!-- 首页文章列表模板 -->
 {% include tpl/index-article-list.html %}
 <!-- 列表页文章列表模板 -->
 {% include tpl/list-article-list.html %}
-<!-- 导航模板 -->
-{% include tpl/nav.html %}
+
 <!-- 标签页模板 -->
 {% include tpl/tags-li.html %}
