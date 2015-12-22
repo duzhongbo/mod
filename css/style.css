@@ -11,6 +11,7 @@ body,ul,h1{margin: 0;padding: 0;}
 .fl{float: left;}
 .fr{float: right;}
 .alpha-000-5{background-color: rgba(0,0,0,.5);}
+.border-b-1-s-fff{border-bottom: 1px #fff solid;}
 
 .wrap{font-size: 62.5%;}
 .wrap a:hover{color: #f60;}
@@ -21,7 +22,7 @@ body,ul,h1{margin: 0;padding: 0;}
 .index-bg-img1{background-image: url(../img/bg1.jpg);}
 .index-bg-img2{background-image: url(../img/bg2.jpg);}
 .index-main{width: 500px;margin-top: 35px;}
-.index-main-head{font-size: 2.2em;line-height: 35px;border-bottom: 1px #ccc solid;}
+.index-main-head{font-size: 2.2em;line-height: 35px;}
 .article-list-li{line-height: 20px;}
 
 
