@@ -1,0 +1,14 @@
+<script type="text/template" id="J_tag">
+
+<div class="common-inner auto">
+	<h3>标签页</h3>
+	<ul class="tags-ul p10">
+	<% for(var i=0,len=aTag.length;i<len;i++) { %>
+		<li class="tags-li">
+			<a href="tag=<%= aTag[i] %>" class="tags-a"><%= aTag[i] %></a>
+		</li>
+	<% } %>
+	</ul>
+</div>
+
+</script>

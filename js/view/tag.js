@@ -5,10 +5,10 @@ var Tag = Backbone.View.extend({
     var oData = {
       aTag:aTags
     }
-  	$('.tags-ul').html(this.template(oData));
+  	$('.tags').html(this.template(oData));
   },
   template:_.template($('#J_tag').html()),
-  el:$('.tags-ul'),
+  el:$('.tags'),
   events:{
     'click .tags-a':'showArticles'
   },
