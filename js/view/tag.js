@@ -16,6 +16,12 @@ var Tag = Backbone.View.extend({
     var target = e.target || e.srcElement;
     var url = $(target).attr('href');
     location.hash=url;
+
+    //
+    var temp = require('./tag_articles.js');
+    var TagArticles = temp.TagArticles;
+    var t = new TagArticles;
+
     return false;
   }
 });

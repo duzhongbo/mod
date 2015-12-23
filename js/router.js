@@ -7,6 +7,7 @@ var Router = Backbone.Router.extend({
 		'index':'index',// 只有域名的情况,首页
 		'list':'list',// 列表页
 		'tags':'tags',// 标签页
+		'tag=:tag':'tag',// 具体某个标签类别下，#tag=xxx
 		'article/:year/:month/:date/:title':'showDetail',// #article/2015/11/05/xxoo.html文章页
 		'search=:keyword':'search'
 	},
@@ -82,8 +83,10 @@ var Router = Backbone.Router.extend({
 		var temp = require('./view/tag.js');
 		var Tag = temp.Tag;
 		var t = new Tag;
+	},
+	tag:function(tag){
+		console.log(tag,oArticle[tag]);
 	}
-
 });
 
 exports.Router = Router;

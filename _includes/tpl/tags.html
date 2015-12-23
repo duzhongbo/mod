@@ -2,13 +2,24 @@
 
 <div class="common-inner auto">
 	<h3>标签页</h3>
-	<ul class="tags-ul p10">
+	<ul class="tags-ul p10 oh">
 	<% for(var i=0,len=aTag.length;i<len;i++) { %>
 		<li class="tags-li">
 			<a href="tag=<%= aTag[i] %>" class="tags-a"><%= aTag[i] %></a>
 		</li>
 	<% } %>
 	</ul>
+	<div class="tags-articles"></div>
 </div>
+
+</script>
+
+<script type="text/template" id="J_tag_articles">
+
+<ul class="p10">
+	<% for(var i=0,len=aTagAticle.length;i<len;i++) { %>
+	<li><a href="" class="tags-articles-a"><%= aTagAticle[i].title %></a></li>
+	<% } %>
+</ul>
 
 </script>
