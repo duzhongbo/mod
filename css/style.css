@@ -57,7 +57,7 @@ a:hover{color: #f60;}
 .article-list-li{line-height: 22px;}
 
 
-.index,.list,.article,.tags{height:-webkit-calc(100% - 25px);}
+.index,.list,.article,.tags,.search-result{height:-webkit-calc(100% - 25px);}
 .tags{}
 .tags-li{float: left;margin-right: 20px;}
 .search{}

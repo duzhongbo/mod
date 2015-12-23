@@ -32,8 +32,20 @@ title: 杜忠波的个人网站
 	<div class="list page oh" style="display:none"></div>
 	<!-- 标签页 -->
 	<div class="tags page oh" style="display:none"></div>
+	<!-- 搜索结果页 -->
+	<div class="search-result page oh" style="display:none">
+		<div class="common-inner auto">
+			<h3>搜索结果</h3>
+			<ul class="article-ul pl10">
+				<li class="article-li"><a href="" class="article-a">文本1</a></li>
+				<li class="article-li"><a href="" class="article-a">文本2</a></li>
+				<li class="article-li"><a href="" class="article-a">文本3</a></li>
+			</ul>			
+		</div>
+	</div>
 	<!-- 页脚 -->
 	<div class="footer tar alpha-000-7">duzhongbo 2015</div>
+
 </div>
 
 
@@ -52,3 +64,6 @@ title: 杜忠波的个人网站
 
 <!-- 标签页模板 -->
 {% include tpl/tags.html %}
+
+<!-- 搜索结果模板 -->
+{% include tpl/search-result.html %}
