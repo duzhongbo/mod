@@ -86,6 +86,15 @@ var Router = Backbone.Router.extend({
 	},
 	tag:function(tag){
 		console.log(tag,oArticle[tag]);
+		var temp = require('./view/tag.js');
+		var Tag = temp.Tag;
+		var t = new Tag;
+
+	    var temp = require('./view/tag_articles.js');
+	    var TagArticles = temp.TagArticles;
+	    var t = new TagArticles;
+	    $('.page').hide();
+	    $('.tags,.nav,.footer').show();
 	}
 });
 
