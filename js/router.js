@@ -95,7 +95,41 @@ var Router = Backbone.Router.extend({
 	    var t = new TagArticles;
 	    $('.page').hide();
 	    $('.tags,.nav,.footer').show();
+	},
+	search:function(keyword){
+		var aRes;
+		aRes=this.search2(keyword);
+		if(!aRes.length&&$('.search-result-ul').length){
+			$('.search-result').show();
+			$('.search-result-ul')[0].outerHTML='<p class="tac fw">找到不到相关文章!</p>';
+			return;
+		}
+		this.aData = aRes;
+		var oData = {
+			aSearch:aRes
+		}
+		window.searchResult = aRes;
+
+		//
+		var temp = require('./view/search_result.js');
+		var s = new temp.SearchResult;
+		$('.page').hide();
+		$('.search-result,.nav').show();
+
+
+	},
+	search2:function(keyword){
+		var data=[];
+		for(var i=0,len=aArticle.length;i<len;i++){
+			if(aArticle[i]['title'].indexOf(keyword)!=-1
+				||aArticle[i]['content'].indexOf(keyword)!=-1){
+				data.push(aArticle[i]);
+			}
+		}
+		return data;
+
 	}
+
 });
 
 exports.Router = Router;

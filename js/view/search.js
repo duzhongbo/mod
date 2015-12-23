@@ -20,23 +20,6 @@ define(function(require, exports) {
 				alert("输入不能为空！");
 			}else{
 				location.hash='search='+val;
-				aRes=this.search(val,aArticle);
-				if(!aRes.length&&$('.search-result-ul').length){
-					$('.search-result').show();
-					$('.search-result-ul')[0].outerHTML='<p class="tac fw">找到不到相关文章!</p>';
-					return;
-				}
-				this.aData = aRes;
-				var oData = {
-					aSearch:aRes
-				}
-				window.searchResult = aRes;
-
-				//
-				var temp = require('./search_result.js');
-				var s = new temp.SearchResult;
-				$('.page').hide();
-				$('.search-result').show();
 				
 				
 			}
