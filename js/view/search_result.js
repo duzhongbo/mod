@@ -8,6 +8,13 @@ define(function(require, exports) {
 			$('.search-result').html(this.template(oData));			
 		},
 		template:_.template($('#J_search_result').html()),
+		events:{
+			'click .article-a':'showDetail'
+		},
+		showDetail:function(){
+			alert("123");
+			return false;
+		}
 	});
 
 
