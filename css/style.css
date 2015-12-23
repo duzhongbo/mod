@@ -1,5 +1,6 @@
 html,body,.wrap,.welcome{height: 100%;}
 body,ul,h1,h3{margin: 0;padding: 0;}
+body{line-height: 22px;}
 a{color: #000;}
 a:hover{color: #f60;}
 
@@ -30,7 +31,7 @@ a:hover{color: #f60;}
 .search-input{width: 120px;border-radius: 2px;border:none;margin-left: 5px;}
 .search-button{border:none;border-radius: 2px;cursor: pointer;}
 
-.common-inner{margin-top: 35px;width: 80%;}
+.common-inner{margin-top: 35px;width: 95%;}
 .article{}
 .article-title{margin-bottom: 20px;}
 .article-content{line-height: 22px;text-indent: 2em;}
@@ -43,10 +44,15 @@ a:hover{color: #f60;}
 .welcome-bg-img2{background-image: url(../img/bg2.jpg);}
 .welcome-main{margin-top: 367px;}
 
+.index-recommend{margin-bottom: 10px;}
+.summary-title{margin-bottom: 10px;}
+.summary-info{color: #666;}
+.summary-more{color: #00f;}
+
 .article-list-li{line-height: 22px;}
 
 
-.list,.article,.tags{height:-webkit-calc(100% - 25px);}
+.index,.list,.article,.tags{height:-webkit-calc(100% - 25px);}
 .tags{}
 .tags-li{float: left;margin-right: 20px;}
 .search{}
