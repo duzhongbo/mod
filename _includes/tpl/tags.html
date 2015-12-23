@@ -18,7 +18,11 @@
 
 <ul class="p10">
 	<% for(var i=0,len=aTagAticle.length;i<len;i++) { %>
-	<li><a href="" class="tags-articles-a"><%= aTagAticle[i].title %></a></li>
+	<li>
+		<a href="#article<%= aTagAticle[i].url %>" class="tags-articles-a">
+			<%= aTagAticle[i].title %>
+		</a>
+	</li>
 	<% } %>
 </ul>
 
