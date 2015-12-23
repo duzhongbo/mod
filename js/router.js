@@ -3,7 +3,8 @@ define(function(require, exports) {
 
 var Router = Backbone.Router.extend({
 	routes:{
-		'':'index',// 只有域名的情况,首页
+		'':'welcome',// 欢迎页
+		'index':'index',// 只有域名的情况,首页
 		'list':'list',// 列表页
 		'tags':'tags',// 标签页
 		'article/:year/:month/:date/:title':'showDetail',// #article/2015/11/05/xxoo.html文章页
@@ -25,6 +26,14 @@ var Router = Backbone.Router.extend({
 				console.log(aArticle[i]);
 			}
 		}
+	},
+	welcome:function(){
+		$('.page,.nav,.footer').hide();
+		$('.welcome').show();
+		$('.nav-a').removeClass('nav-cur-a');
+		var obj = $('.nav-a')[0];
+		$(obj).addClass('nav-cur-a');
+		
 	},
 	index:function(){
 		$('.page,.nav,.footer').hide();

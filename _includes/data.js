@@ -53,7 +53,7 @@ var aTags = JSON.parse(aTags);
 // 导航数据
 var aNav = [
 {
-	href:'#',
+	href:'#index',
 	text:'首页'
 },
 {
