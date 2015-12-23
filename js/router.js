@@ -10,6 +10,7 @@ var Router = Backbone.Router.extend({
 		'search=:keyword':'search'
 	},
 	showDetail:function () {
+		$('.nav').show();
 		var url = (location.hash).split('#article')[1];
 		this.filterData(url);
 	},
