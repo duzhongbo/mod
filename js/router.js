@@ -99,9 +99,9 @@ var Router = Backbone.Router.extend({
 	search:function(keyword){
 		var aRes;
 		aRes=this.search2(keyword);
-		if(!aRes.length&&$('.search-result-ul').length){
-			$('.search-result').show();
-			$('.search-result-ul')[0].outerHTML='<p class="tac fw">找到不到相关文章!</p>';
+		if(!aRes.length){
+			$('.search-result,.nav').show();
+			$('.search-result ul')[0].outerHTML='<p class="tac fw">找到不到相关文章!</p>';
 			return;
 		}
 		this.aData = aRes;
