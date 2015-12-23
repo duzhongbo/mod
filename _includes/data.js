@@ -53,15 +53,15 @@ var aTags = JSON.parse(aTags);
 // 导航数据
 var aNav = [
 {
-	href:'/',
+	href:'#',
 	text:'首页'
 },
 {
-	href:'/list',
+	href:'#list',
 	text:'列表页'
 },
 {
-	href:'/tags',
+	href:'#tags',
 	text:'标签页'
 },
 ];

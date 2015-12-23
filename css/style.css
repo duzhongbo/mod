@@ -37,6 +37,7 @@ a:hover{color: #f60;}
 
 .index{color:#fff;}
 .index-a{color: #fff;text-decoration: none;}
+.index-a:hover{color: #fff;text-decoration: underline;}
 .index-bg-img{background: fixed no-repeat 50% 50% #000;background-size: cover;}
 .index-bg-img0{background-image: url(../img/bg0.jpg);}
 .index-bg-img1{background-image: url(../img/bg1.jpg);}
