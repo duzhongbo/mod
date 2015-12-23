@@ -5,10 +5,10 @@ var List = Backbone.View.extend({
     var oData = {
       aArticle:aArticle
     }
-  	$('.list .common-inner').html(this.template(oData));
+  	$('.list').html(this.template(oData));
   },
   template:_.template($('#J_list').html()),
-  el:$('.list .article-list-ul'),
+  el:$('.list'),
   events:{
     'click .article-list-a':'showArticles'
   },

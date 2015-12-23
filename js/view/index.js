@@ -5,7 +5,7 @@ var Index = Backbone.View.extend({
     var oData = {
       aArticle:aArticle
     }
-  	$('.index .common-inner').html(this.template(oData));
+  	$('.index').html(this.template(oData));
   },
   template:_.template($('#J_index').html()),
   el:$('.index'),
