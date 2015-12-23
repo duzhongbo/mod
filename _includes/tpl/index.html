@@ -1,0 +1,25 @@
+
+<script type="text/template" id="J_index">
+
+<div class="index-recommend">
+	<h3 class="summary-title">有没有安全的工作？</h3>
+	<div class="summary-content">如果你经常使用互联网，可能知道有一种东西叫做Flash...</div>
+	<div class="summary-info">Posted By 阮一峰 on 2015年12月15日 10:12 | 留言（54）标签： 观点与感想</div>
+	<a href="" class="summary-more">继续阅读全文 »</a>
+</div>
+<div class="index-lastest">
+	<h3>最新文章</h3>
+	<ul class="article-ul p10">
+		<% for(var i=0;i<5;i++) { %>
+		<li class="article-li">
+			<div class="article-list-date fr"><%= aArticle[i].date %></div>
+			<a href="#article<%= aArticle[i].url %>" class="article-a"><%= aArticle[i].title %></a>
+		</li>
+		<% } %>
+	</ul>
+	<a href="#list" class="index-a">查看更多</a>
+</div>			
+
+
+
+</script>
