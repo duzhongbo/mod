@@ -23,7 +23,7 @@ a:hover{color: #f60;}
 .wrap{font-size: 62.5%;letter-spacing: 1px;}
 
 .nav{line-height: 25px;box-shadow: 0px 5px 10px #ccc;}
-.nav-a{float: left;color: #fff;padding: 0 5px;text-decoration: none;}
+.nav-a{float: left;color: #fff;padding: 0 5px;text-decoration: none;text-shadow: 1px 1px 2px #f00;}
 .nav-a:hover{background-color: #000;}
 .nav-cur-a,.nav-cur-a:hover{background-color: #f00;color: #fff;text-shadow: 1px 1px 2px #000;}
 .nav-cur-a:hover{cursor: default;}
@@ -47,6 +47,7 @@ a:hover{color: #f60;}
 
 .index-recommend{margin-bottom: 10px;}
 .summary-title{margin-bottom: 10px;}
+.summary-content{}
 .summary-info{color: #666;}
 .summary-more{color: #00f;}
 
@@ -58,4 +59,4 @@ a:hover{color: #f60;}
 .tags-li{float: left;margin-right: 20px;}
 .search{}
 
-.footer{line-height: 25px;padding-right: 10px;color: #fff;}
+.footer{line-height: 25px;padding-right: 10px;color: #fff;box-shadow: 0px -2px 10px #666;}
