@@ -1,15 +1,16 @@
 define(function(require, exports) {
-
+	var temp;
 	// 导航
-	var temp = require('./view/nav.js');
-	var Nav = temp.Nav;
-	var n = new Nav;
+	temp = require('./view/nav.js');
+	var n = new temp.Nav;
 
 	// 路由
-	var temp = require('./router.js');
-	var Router = temp.Router;
-	var r = new Router;
+	temp = require('./router.js');
+	var r = new temp.Router;
 	Backbone.history.start();
 
+	// 搜索
+	temp = require('./view/search.js');
+	var s = new temp.Search;
 
 });
