@@ -21,11 +21,24 @@ var Router = Backbone.Router.extend({
 			if(sUrl==url){
 				$('.page').hide();
 				$('.article-title').html(aArticle[i].title);
-				$('.article-content').html(aArticle[i].content);
+				var temp = this.html_decode(aArticle[i].content);
+				$('.article-content').html(temp);
 				$('.article').show();
 				console.log(aArticle[i]);
 			}
 		}
+	},
+	html_decode:function (str) {// 将已经转义的html标签重新转回
+		var s = "";   
+		if (str.length == 0) return "";   
+		s = str.replace(/&gt;/g, ">");   
+		s = s.replace(/&lt;/g, "<");   
+		s = s.replace(/&nbsp;/g, " ");   
+		s = s.replace(/&quot;/g, "\"");   
+		s = s.replace(/<br>/g, "\n");
+		s = s.replace(/class/g,' class');
+		s = s.replace(/src/g,' src');
+		return s;   		
 	},
 	welcome:function(){
 		$('.page,.nav,.footer').hide();
@@ -36,6 +49,12 @@ var Router = Backbone.Router.extend({
 		
 	},
 	index:function(){
+		// 首页
+		var temp = require('./view/index.js');
+		var Index = temp.Index;
+		var i = new Index;
+
+		
 		$('.page').hide();
 		$('.index,.nav,.footer').show();
 		$('.nav-a').removeClass('nav-cur-a');

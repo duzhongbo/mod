@@ -11,10 +11,5 @@ define(function(require, exports) {
 	var r = new Router;
 	Backbone.history.start();
 
-	// 首页
-	var temp = require('./view/index.js');
-	var Index = temp.Index;
-	var i = new Index;
-
 
 });

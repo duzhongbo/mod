@@ -17,7 +17,20 @@ var Index = Backbone.View.extend({
     var url = $(target).attr('href');
     location.hash=url;
     return false;
-  }
+  },
+  html_decode:function (str) {// 将已经转义的html标签重新转回
+    var s = "";   
+    if (str.length == 0) return "";   
+    s = str.replace(/&gt;/g, ">");   
+    s = s.replace(/&lt;/g, "<");   
+    s = s.replace(/&nbsp;/g, " ");   
+    s = s.replace(/&quot;/g, "\"");   
+    s = s.replace(/<br>/g, "\n");
+    s = s.replace(/class/g,' class');
+    s = s.replace(/src/g,' src');
+    return s;       
+  },
+
 });
 
 exports.Index = Index;

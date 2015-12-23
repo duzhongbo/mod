@@ -4,7 +4,7 @@
 <div class="index-recommend">
 	<h3 class="summary-title"><%= aArticle[0].title %></h3>
 	<div class="summary-content">
-		<%= aArticle[0].content.substring(0,100) %>...
+		<%= this.html_decode(aArticle[0].content.substring(0,100)) %>...
 		<a href="#article<%= aArticle[0].url %>" class="summary-more">阅读全文 »</a>
 	</div>
 	<div class="summary-info tar">Posted By duzhongbo on 
