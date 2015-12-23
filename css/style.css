@@ -37,7 +37,8 @@ a:hover{color: #f60;}
 .article-content{line-height: 22px;text-indent: 2em;}
 
 .welcome{color:#fff;}
-.welcome-a,.welcome-a:hover{color: #fff;}
+.welcome-a{color:#fff;text-decoration: none;}
+.welcome-a:hover{color: #fff;text-decoration: underline;}
 .welcome-bg-img{background: fixed no-repeat 50% 50% #000;background-size: cover;}
 .welcome-bg-img0{background-image: url(../img/bg0.jpg);}
 .welcome-bg-img1{background-image: url(../img/bg1.jpg);}
