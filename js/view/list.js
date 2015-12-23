@@ -5,9 +5,9 @@ var List = Backbone.View.extend({
     var oData = {
       aArticle:aArticle
     }
-  	$('.list .article-list-ul').html(this.template(oData));
+  	$('.list .common-inner').html(this.template(oData));
   },
-  template:_.template($('#J_list_article_list').html()),
+  template:_.template($('#J_list').html()),
   el:$('.list .article-list-ul'),
   events:{
     'click .article-list-a':'showArticles'
