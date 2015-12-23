@@ -27,19 +27,15 @@ var Router = Backbone.Router.extend({
 		}
 	},
 	index:function(){
-		$('.page').hide();
+		$('.page,.nav,.footer').hide();
 		$('.index').show();
-		$('.nav').hide();
-		$('.footer').hide();
 		$('.nav-a').removeClass('nav-cur-a');
 		var obj = $('.nav-a')[0];
 		$(obj).addClass('nav-cur-a');
 	},
 	list:function(){
 		$('.page').hide();
-		$('.list').show();
-		$('.nav').show();
-		$('.footer').show();
+		$('.list,.nav,.footer').show();
 		$('.nav-a').removeClass('nav-cur-a');
 		var obj = $('.nav-a')[1];
 		$(obj).addClass('nav-cur-a');
