@@ -92,6 +92,13 @@ var Router = Backbone.Router.extend({
 		$(obj).addClass('nav-cur-a');
 
 		m.set('aTagAticle',oArticle[tag]);
+		// 标签高亮
+		$('.tags-a').removeClass('tags-cur-a');
+		$('.tags-a').each(function(){
+			if($(this).html()==tag){
+				$(this).addClass('tags-cur-a');
+			}
+		});
 
 	    $('.page').hide();
 	    $('.tags,.nav,.footer').show();
