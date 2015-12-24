@@ -1,5 +1,9 @@
 define(function(require, exports) {
 	var temp;
+
+	// 欢迎页图文切换
+	temp = require('./view/welcome.js');
+	new temp.Welcome;
 	// 导航
 	temp = require('./view/nav.js');
 	new temp.Nav;
@@ -16,11 +20,6 @@ define(function(require, exports) {
 	// 搜索结果页
 	temp = require('./view/search_result.js');
 	new temp.SearchResult({model:ms});
-
-
-	// 欢迎页图文切换
-	temp = require('./view/welcome.js');
-	new temp.Welcome;
 
 	// 首页视图
 	temp = require('./view/index.js');
