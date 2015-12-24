@@ -1,4 +1,4 @@
-html,body,.wrap,.welcome{height: 100%;}
+html,body,.wrap,.welcome,.welcome-bg-img{height: 100%;}
 body,ul,h1,h3{margin: 0;padding: 0;}
 body{line-height: 22px;}
 img{border-radius: 10px;}

@@ -66,4 +66,19 @@ var aNav = [
 },
 ];
 
+// 欢迎页数据
+var aWelcome = [
+	{
+		cls:'welcome-bg-img0',
+		txt:'对于世界而言，你是一个人；但是对于某个人，你是他的整个世界。《水晶之恋》'
+	},
+	{
+		cls:'welcome-bg-img1',
+		txt:'只有在卡拉面前，我才觉得自己有点人样”《卡拉是条狗》'
+	},
+	{
+		cls:'welcome-bg-img2',
+		txt:'俄罗斯虽大，但已无路可退；因为我们的身后就是莫斯科——无名氏'
+	}
+];
 console.log(aArticle,aTags,oArticle,aNav);
