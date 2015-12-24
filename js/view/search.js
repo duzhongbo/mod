@@ -16,13 +16,9 @@ define(function(require, exports) {
 			console.log("click");
 			var val = $('.search-input').val(),aRes;
 			if(val== ''){
-				// com.openPop('输入不能为空！');
-				// alert("输入不能为空！");
-				// 弹窗
 				temp = require('./pop.js');
 				window.popMsg = '输入不能为空！';
-				var p = new temp.Pop;
-
+				new temp.Pop;
 			}else{
 				location.hash='search='+val;
 				
