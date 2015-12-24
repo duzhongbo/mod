@@ -12,7 +12,7 @@ var Router = Backbone.Router.extend({
 		'search=:keyword':'search'
 	},
 	showDetail:function () {
-		$('.nav').show();
+		$('.nav,.footer').show();
 		var url = (location.hash).split('#article')[1];
 		this.filterData(url);
 	},
@@ -114,7 +114,7 @@ var Router = Backbone.Router.extend({
 		var temp = require('./view/search_result.js');
 		var s = new temp.SearchResult;
 		$('.page').hide();
-		$('.search-result,.nav').show();
+		$('.search-result,.nav,.footer').show();
 
 
 	},
