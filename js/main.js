@@ -13,4 +13,9 @@ define(function(require, exports) {
 	temp = require('./view/search.js');
 	var s = new temp.Search;
 
+	// 首页图文切换
+	temp = require('./view/welcome.js');
+	var w = new temp.Welcome;
+
+
 });
