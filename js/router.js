@@ -94,10 +94,8 @@ var Router = Backbone.Router.extend({
 		var obj = $('.nav-a')[2];
 		$(obj).addClass('nav-cur-a');
 
+		m.set('aTagAticle',oArticle[tag]);
 
-	    var temp = require('./view/tag_articles.js');
-	    var TagArticles = temp.TagArticles;
-	    var t = new TagArticles;
 	    $('.page').hide();
 	    $('.tags,.nav,.footer').show();
 	},

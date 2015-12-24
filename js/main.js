@@ -4,10 +4,6 @@ define(function(require, exports) {
 	temp = require('./view/nav.js');
 	var n = new temp.Nav;
 
-	// 路由
-	temp = require('./router.js');
-	var r = new temp.Router;
-	Backbone.history.start();
 
 	// 搜索
 	temp = require('./view/search.js');
@@ -17,5 +13,19 @@ define(function(require, exports) {
 	temp = require('./view/welcome.js');
 	var w = new temp.Welcome;
 
+	// 标签页文章列表模型
+	temp = require('./model/tag_articles_model.js');
+	var modelTagArticles = temp.modelTagArticles;
+	window.m = new modelTagArticles;
+
+	// 标签页文章列表视图
+	temp = require('./view/tag_articles.js');
+	var TagArticles = temp.TagArticles;
+	window.t = new TagArticles({model:m});
+
+	// 路由
+	temp = require('./router.js');
+	var r = new temp.Router;
+	Backbone.history.start();
 
 });

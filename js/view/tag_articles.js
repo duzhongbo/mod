@@ -2,12 +2,11 @@ define(function(require, exports) {
 
 var TagArticles = Backbone.View.extend({
   initialize:function(){
-    var hash = location.hash;
-    var aData = oArticle[hash.split('#tag=')[1]];
-    var oData = {
-      aTagAticle:aData
-    }
-  	$('.tags-articles').html(this.template(oData));
+  	this.show();
+    this.listenTo(this.model,'change',this.show);
+  },
+  show:function(){
+    $('.tags-articles').html(this.template(this.model.toJSON()));
   },
   template:_.template($('#J_tag_articles').html()),
   el:$('.tags-articles'),
