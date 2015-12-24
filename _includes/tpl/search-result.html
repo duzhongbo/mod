@@ -2,16 +2,18 @@
 
 
 <div class="common-inner auto">
-	<h3>搜索结果</h3>
-	<ul class="article-ul pl10">
-		<% for(var i=0,len=aSearchResult.length;i<len;i++) { %>
-			<li class="article-li">
-				<a href="#article<%= aSearchResult[i].url %>" class="article-a">
-					<%= aSearchResult[i].title %>
-				</a>
-			</li>
-		<% } %>
-	</ul>			
+	<h3 class="search-result-head">搜索结果</h3>
+	<div class="search-result-body">
+		<ul class="article-ul pl10">
+			<% for(var i=0,len=aSearchResult.length;i<len;i++) { %>
+				<li class="article-li">
+					<a href="#article<%= aSearchResult[i].url %>" class="article-a">
+						<%= aSearchResult[i].title %>
+					</a>
+				</li>
+			<% } %>
+		</ul>			
+	</div>
 </div>
 
 
