@@ -5,7 +5,7 @@ define(function(require, exports) {
 	new require('./view/welcome.js').Welcome;
 	// 导航
 	temp = require('./view/nav.js');
-	new temp.Nav;
+	new temp.VNav;
 
 
 	// 搜索

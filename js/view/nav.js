@@ -1,5 +1,5 @@
 define(function(require, exports) {
-	var Nav = Backbone.View.extend({
+	var VNav = Backbone.View.extend({
 		initialize:function(){
 			var oData={
 				aNav:aNav
@@ -10,5 +10,5 @@ define(function(require, exports) {
 	});
 
 
-	exports.Nav = Nav;
+	exports.VNav = VNav;
 });
