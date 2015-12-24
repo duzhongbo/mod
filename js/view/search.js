@@ -13,7 +13,6 @@ define(function(require, exports) {
 			console.log("blur");
 		},
 		click:function(){
-			console.log("click");
 			var val = $('.search-input').val(),aRes;
 			if(val== ''){
 				temp = require('./pop.js');
@@ -21,8 +20,6 @@ define(function(require, exports) {
 				new temp.Pop;
 			}else{
 				location.hash='search='+val;
-				
-				
 			}
 		},
 		search:function(keyword){
@@ -33,11 +30,9 @@ define(function(require, exports) {
 					data.push(aArticle[i]);
 				}
 			}
-			return data;
-		
+			return data;	
 		}
 	});
-
 
 	exports.VSearch = VSearch;
 });
