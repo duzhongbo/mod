@@ -1,5 +1,5 @@
 define(function(require, exports) {
-	var Search = Backbone.View.extend({
+	var VSearch = Backbone.View.extend({
 		el:$('.search'),
 		events:{
 			'focus .search-input':'focus',
@@ -43,5 +43,5 @@ define(function(require, exports) {
 	});
 
 
-	exports.Search = Search;
+	exports.VSearch = VSearch;
 });

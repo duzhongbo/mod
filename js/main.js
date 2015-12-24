@@ -10,7 +10,7 @@ define(function(require, exports) {
 
 	// 搜索
 	temp = require('./view/search.js');
-	new temp.Search;
+	new temp.VSearch;
 
 	// 搜街结果模型
 	temp = require('./model/search_result.js');
