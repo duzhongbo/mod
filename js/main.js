@@ -24,6 +24,11 @@ define(function(require, exports) {
 	var List = temp.List;
 	var l = new List;
 
+	// 标签页视图
+	var temp = require('./view/tag.js');
+	var Tag = temp.Tag;
+	var t = new Tag;
+
 
 	// 标签页文章列表模型
 	temp = require('./model/tag_articles_model.js');

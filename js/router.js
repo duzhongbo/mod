@@ -70,10 +70,6 @@ var Router = Backbone.Router.extend({
 		$('.nav-a').removeClass('nav-cur-a');
 		var obj = $('.nav-a')[2];
 		$(obj).addClass('nav-cur-a');
-		//
-		var temp = require('./view/tag.js');
-		var Tag = temp.Tag;
-		var t = new Tag;
 	},
 	tag:function(tag){
 
