@@ -2,7 +2,8 @@ define(function(require, exports) {
 	var temp;
 
 	// 欢迎页图文切换
-	new require('./view/welcome.js').Welcome;
+	temp = require('./view/welcome.js')
+	new temp.Welcome;
 	// 导航
 	temp = require('./view/nav.js');
 	new temp.VNav;
