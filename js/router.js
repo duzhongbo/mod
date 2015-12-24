@@ -13,6 +13,7 @@ var Router = Backbone.Router.extend({
 	},
 	showDetail:function () {
 		$('.nav,.footer').show();
+		$('.nav-a').removeClass('nav-cur-a');
 		var url = (location.hash).split('#article')[1];
 		this.filterData(url);
 	},
