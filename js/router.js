@@ -51,12 +51,6 @@ var Router = Backbone.Router.extend({
 		
 	},
 	index:function(){
-		// 首页
-		var temp = require('./view/index.js');
-		var Index = temp.Index;
-		var i = new Index;
-
-		
 		$('.page').hide();
 		$('.index,.nav,.footer').show();
 		$('.nav-a').removeClass('nav-cur-a');

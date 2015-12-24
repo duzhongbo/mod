@@ -9,9 +9,15 @@ define(function(require, exports) {
 	temp = require('./view/search.js');
 	var s = new temp.Search;
 
-	// 首页图文切换
+
+	// 欢迎页图文切换
 	temp = require('./view/welcome.js');
 	var w = new temp.Welcome;
+
+	// 首页
+	var temp = require('./view/index.js');
+	var Index = temp.Index;
+	var i = new Index;
 
 	// 标签页文章列表模型
 	temp = require('./model/tag_articles_model.js');
