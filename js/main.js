@@ -14,10 +14,16 @@ define(function(require, exports) {
 	temp = require('./view/welcome.js');
 	var w = new temp.Welcome;
 
-	// 首页
+	// 首页视图
 	var temp = require('./view/index.js');
 	var Index = temp.Index;
 	var i = new Index;
+
+	// 列表页视图
+	var temp = require('./view/list.js');
+	var List = temp.List;
+	var l = new List;
+
 
 	// 标签页文章列表模型
 	temp = require('./model/tag_articles_model.js');
