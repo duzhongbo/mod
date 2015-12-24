@@ -93,6 +93,7 @@ var Router = Backbone.Router.extend({
 		var aRes;
 		aRes=this.search2(keyword);
 		if(!aRes.length){
+			$('.page').hide();
 			$('.search-result,.nav').show();
 			$('.search-result-body').html('<p class="tac fw">找到不到相关文章!</p>');
 			return;

@@ -1,6 +1,6 @@
 define(function(require, exports) {
 
-var modelSearchResult = Backbone.Model.extend({
+var MSearchResult = Backbone.Model.extend({
     defaults : {
       aSearchResult : []
     }
@@ -9,6 +9,6 @@ var modelSearchResult = Backbone.Model.extend({
 
 
 
-exports.modelSearchResult = modelSearchResult;
+exports.MSearchResult = MSearchResult;
 
 });

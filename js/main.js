@@ -14,7 +14,7 @@ define(function(require, exports) {
 
 	// 搜街结果模型
 	temp = require('./model/search_result.js');
-	window.ms = new temp.modelSearchResult;
+	window.ms = new temp.MSearchResult;
 
 	// 搜索结果页
 	temp = require('./view/search_result.js');
