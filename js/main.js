@@ -39,20 +39,19 @@ define(function(require, exports) {
 
 
 	// 标签页文章列表模型
-	temp = require('./model/tag_articles_model.js');
+	temp = require('./model/tag_articles.js');
 	var modelTagArticles = temp.modelTagArticles;
 	window.m = new modelTagArticles;
+
+	// 标签页文章列表视图
+	temp = require('./view/tag_articles.js');
+	var TagArticles = temp.TagArticles;
+	var t = new TagArticles({model:m});
 
 	// 标签页标签部分
 	temp = require('./view/tag.js');
 	var Tag = temp.Tag;
 	var t = new Tag;
-
-
-	// 标签页文章列表视图
-	temp = require('./view/tag_articles.js');
-	var TagArticles = temp.TagArticles;
-	window.t = new TagArticles({model:m});
 
 	// 路由
 	temp = require('./router.js');
