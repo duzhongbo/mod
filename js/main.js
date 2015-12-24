@@ -9,23 +9,31 @@ define(function(require, exports) {
 	temp = require('./view/search.js');
 	var s = new temp.Search;
 
+	// 搜街结果模型
+	temp = require('./model/search_result.js');
+	window.ms = new temp.modelSearchResult;
+
+	// 搜索结果页
+	temp = require('./view/search_result.js');
+	var s = new temp.SearchResult({model:ms});
+
 
 	// 欢迎页图文切换
 	temp = require('./view/welcome.js');
 	var w = new temp.Welcome;
 
 	// 首页视图
-	var temp = require('./view/index.js');
+	temp = require('./view/index.js');
 	var Index = temp.Index;
 	var i = new Index;
 
 	// 列表页视图
-	var temp = require('./view/list.js');
+	temp = require('./view/list.js');
 	var List = temp.List;
 	var l = new List;
 
 	// 标签页视图
-	var temp = require('./view/tag.js');
+	temp = require('./view/tag.js');
 	var Tag = temp.Tag;
 	var t = new Tag;
 
@@ -36,7 +44,7 @@ define(function(require, exports) {
 	window.m = new modelTagArticles;
 
 	// 标签页标签部分
-	var temp = require('./view/tag.js');
+	temp = require('./view/tag.js');
 	var Tag = temp.Tag;
 	var t = new Tag;
 

@@ -97,15 +97,9 @@ var Router = Backbone.Router.extend({
 			$('.search-result ul')[0].outerHTML='<p class="tac fw">找到不到相关文章!</p>';
 			return;
 		}
-		this.aData = aRes;
-		var oData = {
-			aSearch:aRes
-		}
-		window.searchResult = aRes;
 
-		//
-		var temp = require('./view/search_result.js');
-		var s = new temp.SearchResult;
+		ms.set('aSearchResult',aRes);
+
 		$('.page').hide();
 		$('.search-result,.nav,.footer').show();
 
