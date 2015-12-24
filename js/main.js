@@ -18,6 +18,12 @@ define(function(require, exports) {
 	var modelTagArticles = temp.modelTagArticles;
 	window.m = new modelTagArticles;
 
+	// 标签页标签部分
+	var temp = require('./view/tag.js');
+	var Tag = temp.Tag;
+	var t = new Tag;
+
+
 	// 标签页文章列表视图
 	temp = require('./view/tag_articles.js');
 	var TagArticles = temp.TagArticles;
