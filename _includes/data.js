@@ -81,4 +81,3 @@ var aWelcome = [
 		txt:'俄罗斯虽大，但已无路可退；因为我们的身后就是莫斯科——无名氏'
 	}
 ];
-console.log(aArticle,aTags,oArticle,aNav);
