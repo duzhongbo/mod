@@ -25,7 +25,7 @@ var Router = Backbone.Router.extend({
 				var temp = this.html_decode(aArticle[i].content);
 				$('.article-content').html(temp);
 				
-				$('.page').addClass('out');
+				$('.page').show().addClass('out').hide();
 				$('.article').show().removeClass('out').addClass('in');
 
 
