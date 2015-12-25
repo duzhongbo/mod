@@ -55,6 +55,7 @@ var Router = Backbone.Router.extend({
 		$('.welcome').removeClass('out in').show();	
 	},
 	index:function(){
+		$('.page').show().removeClass('in').addClass('out').hide();
 		$('.index,.nav,.footer').show();
 		$('.index').removeClass('out').addClass('in');
 		$('.nav-a').removeClass('nav-cur-a');
