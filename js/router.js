@@ -21,12 +21,14 @@ var Router = Backbone.Router.extend({
 		for(var i=0,len=aArticle.length;i<len;i++){
 			var url = aArticle[i].url
 			if(sUrl==url){
-				// $('.page').hide();
 				$('.article-title').html(aArticle[i].title);
 				var temp = this.html_decode(aArticle[i].content);
 				$('.article-content').html(temp);
-				// $('.article').show();
-				this.movePage($('.article'));
+				
+				$('.page').addClass('out');
+				$('.article').show().removeClass('out').addClass('in');
+
+
 				console.log(aArticle[i]);
 			}
 		}
@@ -57,18 +59,17 @@ var Router = Backbone.Router.extend({
 		
 	},
 	index:function(){
-		$('.page').hide();
 		$('.index,.nav,.footer').show();
+		$('.index').removeClass('out').addClass('in');
 		$('.nav-a').removeClass('nav-cur-a');
 		var obj = $('.nav-a')[0];
 		$(obj).addClass('nav-cur-a');
 	},
 	list:function(){
-		// $('.page').hide();
 		$('.list,.nav,.footer').show();
 
-		$('.page').addClass('out');
-		$('.list').addClass('in');
+		$('.page').hide().addClass('out');
+		$('.list').show().removeClass('out').addClass('in');
 
 		$('.nav-a').removeClass('nav-cur-a');
 		var obj = $('.nav-a')[1];
