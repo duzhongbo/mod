@@ -52,11 +52,7 @@ var Router = Backbone.Router.extend({
 	},
 	welcome:function(){
 		$('.page,.nav,.footer').hide();
-		$('.welcome').show();
-		$('.nav-a').removeClass('nav-cur-a');
-		var obj = $('.nav-a')[0];
-		$(obj).addClass('nav-cur-a');
-		
+		$('.welcome').removeClass('out in').show();	
 	},
 	index:function(){
 		$('.index,.nav,.footer').show();
