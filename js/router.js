@@ -98,8 +98,9 @@ var Router = Backbone.Router.extend({
 			}
 		});
 
-	    $('.page').hide();
+	    $('.page').show().removeClass('in').addClass('out').hide();
 	    $('.tags,.nav,.footer').show();
+	    $('.tags').removeClass('out').addClass('in');
 	},
 	search:function(keyword){
 		var aRes;
