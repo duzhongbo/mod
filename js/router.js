@@ -71,6 +71,8 @@ var Router = Backbone.Router.extend({
 		$(obj).addClass('nav-cur-a');
 	},
 	tag:function(tag){
+		$('.nav,.footer').show();
+		this.movePage($('.tags'));
 		// 导航高亮
 		$('.nav-a').removeClass('nav-cur-a');
 		var obj = $('.nav-a')[2];
