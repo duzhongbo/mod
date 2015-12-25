@@ -70,8 +70,9 @@ var Router = Backbone.Router.extend({
 		this.lightHeightNav(2);
 	},
 	tag:function(tag){
-		$('.nav,.footer').show();
-		this.movePage($('.tags'));
+		$('.tags,.nav,.footer').show();
+		$('.tags').removeClass('out');
+		// this.movePage($('.tags'));
 		this.lightHeightNav(2);
 
 		m.set('aTagAticle',oArticle[tag]);
