@@ -48,35 +48,31 @@ var Router = Backbone.Router.extend({
 		$('.page,.nav,.footer').hide();
 		$('.welcome').removeClass('out in').show();	
 	},
+	lightHeightNav:function(iIndex){
+		$('.nav-a').removeClass('nav-cur-a');
+		var obj = $('.nav-a')[iIndex];
+		$(obj).addClass('nav-cur-a');		
+	},
 	index:function(){
 		$('.nav,.footer').show();
 		this.movePage($('.index'));
-		$('.nav-a').removeClass('nav-cur-a');
-		var obj = $('.nav-a')[0];
-		$(obj).addClass('nav-cur-a');
+		this.lightHeightNav(0);
 	},
 	list:function(){
 		$('.nav,.footer').show();
 		this.movePage($('.list'));
 
-		$('.nav-a').removeClass('nav-cur-a');
-		var obj = $('.nav-a')[1];
-		$(obj).addClass('nav-cur-a');
+		this.lightHeightNav(1);
 	},
 	tags:function(){
 		$('.nav,.footer').show();
 		this.movePage($('.tags'));
-		$('.nav-a').removeClass('nav-cur-a');
-		var obj = $('.nav-a')[2];
-		$(obj).addClass('nav-cur-a');
+		this.lightHeightNav(2);
 	},
 	tag:function(tag){
 		$('.nav,.footer').show();
 		this.movePage($('.tags'));
-		// 导航高亮
-		$('.nav-a').removeClass('nav-cur-a');
-		var obj = $('.nav-a')[2];
-		$(obj).addClass('nav-cur-a');
+		this.lightHeightNav(2);
 
 		m.set('aTagAticle',oArticle[tag]);
 		// 标签高亮
@@ -90,6 +86,7 @@ var Router = Backbone.Router.extend({
 	search:function(keyword){
 		var aRes;
 		aRes=this.search2(keyword);
+		$('.nav-a').removeClass('nav-cur-a');
 		$('.nav,.footer').show()
 		if(!aRes.length){
 			$('.search-result-body').html('<p class="tac fw">找到不到相关文章!</p>');
