@@ -76,8 +76,9 @@ var Router = Backbone.Router.extend({
 		$(obj).addClass('nav-cur-a');
 	},
 	tags:function(){
-		$('.page').hide();
+		$('.page').show().removeClass('in').addClass('out').hide();
 		$('.tags,.nav,.footer').show();
+		$('.tags').removeClass('out').addClass('in');
 		$('.nav-a').removeClass('nav-cur-a');
 		var obj = $('.nav-a')[2];
 		$(obj).addClass('nav-cur-a');
