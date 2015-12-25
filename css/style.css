@@ -71,3 +71,26 @@ a:hover{color: #f60;}
 .pop-head{line-height: 25px;border-bottom: 1px #ccc solid;background-color: #333;color: #fff;letter-spacing: 12px;box-shadow: 0px 5px 10px #ccc;}
 .pop-close{right: 0;top: 0;font-size: 20px;cursor: pointer;}
 .pop-body{padding: 10px;}
+
+/*切屏动画*/
+@-webkit-keyframes slide-in-right {
+    from { -webkit-transform: translateX(100%); }
+    to { -webkit-transform: translateX(0); }
+}
+@-webkit-keyframes slide-out-left {
+    from { -webkit-transform: translateX(0); }
+    to { -webkit-transform: translateX(-100%); }
+}
+.out, .in {
+    -webkit-animation-timing-function: ease-out;
+    -webkit-animation-duration: 350ms;
+}
+.out {
+    -webkit-transform: translateX(-100%);
+    -webkit-animation-name: slide-out-left;
+}
+.in {
+    -webkit-transform: translateX(0);
+    -webkit-animation-name: slide-in-right;
+}
+
