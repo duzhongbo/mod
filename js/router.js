@@ -24,11 +24,13 @@ var Router = Backbone.Router.extend({
 				$('.article-title').html(aArticle[i].title);
 				var temp = this.html_decode(aArticle[i].content);
 				$('.article-content').html(temp);
-				
-				$('.page').show().removeClass('in').addClass('out').hide();
-				$('.article').show().removeClass('out').addClass('in');
+				this.movePage($('.article'));
 			}
 		}
+	},
+	movePage:function(oPage){
+		$('.page').show().removeClass('in').addClass('out').hide();
+		$(oPage).show().removeClass('out').addClass('in');
 	},
 	html_decode:function (str) {// 将已经转义的html标签重新转回
 		var s = "";   
@@ -47,26 +49,23 @@ var Router = Backbone.Router.extend({
 		$('.welcome').removeClass('out in').show();	
 	},
 	index:function(){
-		$('.page').show().removeClass('in').addClass('out').hide();
-		$('.index,.nav,.footer').show();
-		$('.index').removeClass('out').addClass('in');
+		$('.nav,.footer').show();
+		this.movePage($('.index'));
 		$('.nav-a').removeClass('nav-cur-a');
 		var obj = $('.nav-a')[0];
 		$(obj).addClass('nav-cur-a');
 	},
 	list:function(){
-		$('.page').show().removeClass('in').addClass('out').hide();
-		$('.list,.nav,.footer').show();
-		$('.list').removeClass('out').addClass('in');
+		$('.nav,.footer').show();
+		this.movePage($('.list'));
 
 		$('.nav-a').removeClass('nav-cur-a');
 		var obj = $('.nav-a')[1];
 		$(obj).addClass('nav-cur-a');
 	},
 	tags:function(){
-		$('.page').show().removeClass('in').addClass('out').hide();
-		$('.tags,.nav,.footer').show();
-		$('.tags').removeClass('out').addClass('in');
+		$('.nav,.footer').show();
+		this.movePage($('.tags'));
 		$('.nav-a').removeClass('nav-cur-a');
 		var obj = $('.nav-a')[2];
 		$(obj).addClass('nav-cur-a');
@@ -85,24 +84,17 @@ var Router = Backbone.Router.extend({
 				$(this).addClass('tags-cur-a');
 			}
 		});
-
-	    $('.page').show().removeClass('in').addClass('out').hide();
-	    $('.tags,.nav,.footer').show();
-	    $('.tags').removeClass('out').addClass('in');
 	},
 	search:function(keyword){
 		var aRes;
 		aRes=this.search2(keyword);
-		$('.page').show().removeClass('in').addClass('out').hide();
-		$('.search-result,.nav,.footer').show()
+		$('.nav,.footer').show()
 		if(!aRes.length){
 			$('.search-result-body').html('<p class="tac fw">找到不到相关文章!</p>');
-			$('.search-result').removeClass('out').addClass('in');
-			return;
-		}
-
-		ms.set('aSearchResult',aRes);
-		$('.search-result').removeClass('out').addClass('in');
+		}else{
+			ms.set('aSearchResult',aRes);
+		}		
+		this.movePage($('.search-result'));
 	},
 	search2:function(keyword){
 		var data=[];
