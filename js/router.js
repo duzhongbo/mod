@@ -21,14 +21,20 @@ var Router = Backbone.Router.extend({
 		for(var i=0,len=aArticle.length;i<len;i++){
 			var url = aArticle[i].url
 			if(sUrl==url){
-				$('.page').hide();
+				// $('.page').hide();
 				$('.article-title').html(aArticle[i].title);
 				var temp = this.html_decode(aArticle[i].content);
 				$('.article-content').html(temp);
-				$('.article').show();
+				// $('.article').show();
+				this.movePage($('.article'));
 				console.log(aArticle[i]);
 			}
 		}
+	},
+	movePage:function(oPage){
+		$('.page').show();
+		$('.page').addClass('out');
+		oPage.addClass('in');
 	},
 	html_decode:function (str) {// 将已经转义的html标签重新转回
 		var s = "";   
@@ -58,8 +64,12 @@ var Router = Backbone.Router.extend({
 		$(obj).addClass('nav-cur-a');
 	},
 	list:function(){
-		$('.page').hide();
+		// $('.page').hide();
 		$('.list,.nav,.footer').show();
+
+		$('.page').addClass('out');
+		$('.list').addClass('in');
+
 		$('.nav-a').removeClass('nav-cur-a');
 		var obj = $('.nav-a')[1];
 		$(obj).addClass('nav-cur-a');

@@ -1,6 +1,6 @@
 html,body,.wrap,.welcome,.welcome-bg-img{height: 100%;}
 body,ul,h1,h3{margin: 0;padding: 0;}
-body{line-height: 22px;}
+body{line-height: 22px;overflow: hidden;}
 img{border-radius: 10px;}
 a{color: #000;}
 a:hover{color: #f60;}
