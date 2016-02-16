@@ -66,8 +66,8 @@ a:hover{color: #f60;}
 
 .footer{line-height: 25px;padding-right: 10px;color: #fff;box-shadow: 0px -2px 10px #666;z-index: 100;}
 
-.pop-bg{width: 100%;height: 100%;top: 0;left: 0;}
-.pop{width: 300px;border-radius: 5px;left: 50%;top: 50%;background: #fff;margin: -75px 0 0 -150px;}
+.pop-bg{width: 100%;height: 100%;top: 0;left: 0;z-index: 100;}
+.pop{z-index: 100;width: 300px;border-radius: 5px;left: 50%;top: 50%;background: #fff;margin: -75px 0 0 -150px;}
 .pop-head{line-height: 25px;border-bottom: 1px #ccc solid;background-color: #333;color: #fff;letter-spacing: 12px;box-shadow: 0px 5px 10px #ccc;}
 .pop-close{right: 0;top: 0;font-size: 20px;cursor: pointer;}
 .pop-body{padding: 10px;}
